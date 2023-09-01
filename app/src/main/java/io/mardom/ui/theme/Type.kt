@@ -12,7 +12,7 @@ val YekanBakh = FontFamily(
 )
 
 private val defaultTypography = Typography()
-private const val LINE_HEIGHT_SCALE = 1.075
+private const val LINE_HEIGHT_SCALE = 1.0
 val AppTypography = Typography(
     displayLarge = defaultTypography.displayLarge.copy(
         fontFamily = YekanBakh,
