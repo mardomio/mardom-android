@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Mardom</string>
+    <string name="home">خانه</string>
+    <string name="news">اطلاع‌رسانی</string>
 </resources>

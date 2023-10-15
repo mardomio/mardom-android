@@ -19,9 +19,6 @@
             android:exported="true"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
-            android:showForAllUsers="true"
-            android:showOnLockScreen="true"
-            android:showWhenLocked="true"
             android:theme="@style/Theme.Mardom"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>

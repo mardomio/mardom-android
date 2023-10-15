@@ -4,6 +4,7 @@ import android.app.Activity
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ProvideTextStyle
 import androidx.compose.material3.Surface
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
@@ -13,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
+import io.mardom.BuildConfig
 import io.mardom.ui.RtlLayout
 
 private val darkColorScheme = darkColorScheme(
@@ -81,7 +83,7 @@ private val lightColorScheme = lightColorScheme(
 
 @Composable
 fun AppTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    darkTheme: Boolean = isSystemInDarkTheme() || BuildConfig.DEBUG,
     content: @Composable () -> Unit,
 ) {
     val colorScheme = if (darkTheme) darkColorScheme else lightColorScheme
@@ -100,10 +102,12 @@ fun AppTheme(
             colorScheme = colorScheme,
             typography = AppTypography,
         ) {
-            Surface(
-                modifier = Modifier.fillMaxSize(),
-                content = content,
-            )
+            ProvideTextStyle(value = MaterialTheme.typography.bodyMedium) {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    content = content,
+                )
+            }
         }
     }
 }
