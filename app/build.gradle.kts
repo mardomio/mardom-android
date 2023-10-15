@@ -15,7 +15,7 @@ android {
         applicationId = "io.mardom"
         minSdk = 24
         targetSdk = 34
-        versionCode = 2
+        versionCode = 3
         versionName = "2023.10.15"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
