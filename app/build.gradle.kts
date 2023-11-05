@@ -15,8 +15,8 @@ android {
         applicationId = "io.mardom"
         minSdk = 24
         targetSdk = 34
-        versionCode = 3
-        versionName = "2023.10.15"
+        versionCode = 4
+        versionName = "2023.11.05"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
